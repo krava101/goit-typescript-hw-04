@@ -2,16 +2,16 @@ import React, { createContext, useMemo, useState, useContext } from "react";
 import noop from "lodash/noop";
 
 type MenuIds = "first" | "second" | "last";
-type Menu = { id?: MenuIds; title?: string };
-
-// Додати тип Menu Selected
-type MenuSelected = {
-  selectedMenu:Menu
-}
+type Menu = { id: MenuIds; title: string };
 
 // Додайте тип SelectedMenu
 type SelectedMenu = {
-  id: MenuIds
+  id: MenuIds;
+}
+
+// Додати тип Menu Selected
+type MenuSelected = {
+  selectedMenu: SelectedMenu;
 }
 
 // Додайте тип MenuAction
